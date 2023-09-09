@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { LoggerModule } from 'nestjs-pino';
 import { DbModule } from '../db/db.module';
+import { TodoController } from '../todo/todo.controller';
 import { AppController } from './app.controller';
 
 @Module({
@@ -12,6 +13,6 @@ import { AppController } from './app.controller';
             pinoHttp: { quietReqLogger: true, autoLogging: false },
         }),
     ],
-    controllers: [AppController],
+    controllers: [AppController, TodoController],
 })
 export class AppModule {}

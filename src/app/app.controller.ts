@@ -4,8 +4,11 @@ import { Controller, Get, Logger } from '@nestjs/common';
 export class AppController {
     private readonly logger = new Logger(AppController.name);
 
+    /**
+     * Hello!
+     */
     @Get('/')
-    getHello(): string {
-        return 'Hello World!';
+    getHello(): number[] {
+        return [1, 2, 3];
     }
 }

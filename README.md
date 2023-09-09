@@ -3,8 +3,22 @@
 ### Todo
 - [ ] Proper readme
 - [ ] Migrations
-- [ ] OpenAPI
+- [x] OpenAPI/swagger
 - [ ] GraphQL?
-- [ ] Example service/controller
-- [ ] DTOs
+- [x] Example service/controller
+- [x] DTOs
+- [ ] Port from env
+- [ ] Docker
+- [ ] Logging
+- [ ] Auth
+- [ ] CI/CD
+- [ ] Health check
+- [ ] Caching?
+- [ ] Rate limiting
+- [ ] Monitoring
+- [ ] Metrics
+- [x] Validation
+- [ ] Error handling
+- [ ] Deployment
+- [ ] Cors
 - [ ] Odata? (https://www.odata.org/documentation/)
