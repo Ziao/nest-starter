@@ -9,7 +9,7 @@
 - [ ] GraphQL?
 - [x] Example service/controller
 - [x] DTOs (class-validator)
-- [ ] Port from env
+- [x] Port from env
 - [ ] Docker
 - [ ] Logging (Pino)
 - [ ] Auth

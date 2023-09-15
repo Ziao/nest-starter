@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 const logger = new Logger('App');
+const port = Number(process.env.PORT) || 3000;
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule, {
@@ -28,10 +29,10 @@ async function bootstrap() {
 
     configureSwagger(app);
 
-    await app.listen(3000);
+    await app.listen(port);
 }
 bootstrap().then(() => {
-    logger.log('App started on port 3000');
+    logger.log(`App started on port ${port}`);
 });
 
 const configureSwagger = (app: INestApplication) => {
