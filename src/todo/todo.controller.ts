@@ -1,4 +1,6 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import { ApiProperty } from '@nestjs/swagger';
+import { Todo } from 'src/generated/dto/todo.entity';
 import { PrismaService } from '../db/prisma.service';
 import { CreateTodoDto } from './createTodo.dto';
 import { UpdateTodoDto } from './updateTodo.dto';
@@ -11,8 +13,8 @@ export class TodoController {
      * List todos
      */
     @Get()
-    async list() {
-        return await this.prismaService.todo.findMany();
+    async list(): Promise<Todo[]> {
+        return await this.prismaService.todo.findMany({});
     }
 
     /**
